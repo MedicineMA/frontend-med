@@ -17,8 +17,8 @@ export class ClinicsModalFilterComponent {
   id!: number;
   public allDoctors!: string[];
   clinicForm!: FormGroup;
-  public isNoCameData: boolean = false;
-  public isNoEnterData: boolean = false;
+  public isNoCameData = false;
+  public isNoEnterData = false;
 
   constructor(
     public dialogRef: MatDialogRef<ClinicsModalFilterComponent>,

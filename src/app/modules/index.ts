@@ -12,4 +12,4 @@ export const modules = [
   ViewsModule,
   PrivateDoctorsModule,
   HospitalsModule
-]
+];

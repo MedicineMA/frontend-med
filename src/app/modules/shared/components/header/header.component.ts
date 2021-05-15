@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { SocialAuthService, SocialUser } from 'angularx-social-login';
 
 import { AuthService } from 'src/app/services/auth.service';
@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent  {
+export class HeaderComponent {
 
   public user?: SocialUser;
 
@@ -17,8 +17,10 @@ export class HeaderComponent  {
 
   constructor(private authService: SocialAuthService,
               private authOauthService: AuthService,
-    private route: ActivatedRoute
-    ) {this.routeUrl = this.route._routerState.snapshot.url}
+              private route: Router
+  ) {
+    this.routeUrl = this.route.url;
+  }
 
   async signInWithGoogle(): Promise<void> {
     await this.authOauthService.signInWithGoogle()
@@ -29,7 +31,7 @@ export class HeaderComponent  {
 
   async signOut(): Promise<void> {
     this.authService.authState.subscribe((user) => {
-      this.user =  user;
+      this.user = user;
     });
     if (this.user) {
       await this.authOauthService.googlesignOut();

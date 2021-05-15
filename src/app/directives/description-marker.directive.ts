@@ -1,24 +1,27 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Directive({
-  selector: '[descriptionMarker]'
+  selector: '[appDescriptionMarker]'
 })
-export class DescriptionMarkerDirective {
-  @Input('descriptionMarker') zoom?: number;
+export class DescriptionMarkerDirective implements OnChanges {
+  @Input('appDescriptionMarker') zoom?: number;
 
   constructor(private el: ElementRef) { }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
+    const div = this.el.nativeElement as HTMLDivElement;
+
     if (this.zoom) {
       if (this.zoom >= 21) {
-        this.el.nativeElement.style.fontSize = '16px';
+        div.style.fontSize = '16px';
       } if (this.zoom >= 14 && this.zoom <= 17) {
-        this.el.nativeElement.style.fontSize = '12px';
+        div.style.fontSize = '12px';
       } if (this.zoom <= 14) {
-        this.el.nativeElement.style.visibility = 'hidden';
+        div.style.visibility = 'hidden';
       } else {
-        this.el.nativeElement.style.visibility = 'visible';
+        div.style.visibility = 'visible';
       }
     }
   }
+
 }

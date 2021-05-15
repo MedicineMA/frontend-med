@@ -15,8 +15,8 @@ export class ModalFilterHospitalsComponent {
 
   hospitalForm: FormGroup;
 
-  public isNoCameData: boolean = false;
-  public isNoEnterData: boolean = false;
+  public isNoCameData = false;
+  public isNoEnterData = false;
 
   constructor(
     public dialogRef: MatDialogRef<ModalFilterHospitalsComponent>,

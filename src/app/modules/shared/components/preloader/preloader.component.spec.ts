@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalMessageComponent } from './modal-message.component';
+import { PreloaderComponent } from './preloader.component';
 
-describe('ModalMessageComponent', () => {
-  let component: ModalMessageComponent;
-  let fixture: ComponentFixture<ModalMessageComponent>;
+describe('PreloaderComponent', () => {
+  let component: PreloaderComponent;
+  let fixture: ComponentFixture<PreloaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ModalMessageComponent]
+      declarations: [PreloaderComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalMessageComponent);
+    fixture = TestBed.createComponent(PreloaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

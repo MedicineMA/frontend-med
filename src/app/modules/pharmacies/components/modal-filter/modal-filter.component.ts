@@ -16,8 +16,8 @@ export class ModalFilterComponent {
 
   pharmForm!: FormGroup;
   public id!: number;
-  public isNoCameData: boolean = false;
-  public isNoEnterData: boolean = false;
+  public isNoCameData = false;
+  public isNoEnterData = false;
 
   constructor(
     public dialogRef: MatDialogRef<ModalFilterComponent>,

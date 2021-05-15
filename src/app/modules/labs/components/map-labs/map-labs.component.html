@@ -31,7 +31,7 @@
           [latitude]="coordinates.latitude | decr: zoom"
           [longitude]="coordinates.longitude | sum: zoom"
         >
-          <div class="descrip-marker" [descriptionMarker]="zoom">
+          <div class="descrip-marker" [appDescriptionMarker]="zoom">
             {{ lab.name }}
           </div>
         </agm-overlay>

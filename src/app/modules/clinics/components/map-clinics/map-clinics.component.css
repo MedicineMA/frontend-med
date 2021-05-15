@@ -40,3 +40,10 @@
   font-family: 'Prata', sans-serif;
   }
 
+.loading {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

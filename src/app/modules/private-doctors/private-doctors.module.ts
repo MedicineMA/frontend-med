@@ -1,9 +1,9 @@
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AgmOverlays } from "agm-overlays";
+import { AgmOverlays } from 'agm-overlays';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AgmCoreModule } from '@agm/core';
 

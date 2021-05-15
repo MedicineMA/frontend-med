@@ -1,4 +1,4 @@
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './../../material/material.module';
@@ -10,14 +10,13 @@ import { AgmCoreModule } from '@agm/core';
 
 import { CategoryPageComponent } from './components/category-page/category-page.component';
 import { SharedModule } from '../shared/shared.module';
-import { services } from './../../services/index';
 
 @NgModule({
   declarations: [
     CategoryPageComponent
   ],
   imports: [
-  CommonModule,
+    CommonModule,
     RouterModule,
     MatDialogModule,
     BrowserAnimationsModule,

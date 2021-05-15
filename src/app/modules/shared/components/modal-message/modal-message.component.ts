@@ -10,19 +10,19 @@ import { ModalFilterComponent } from 'src/app/modules/pharmacies/components/moda
 })
 export class ModalMessageComponent {
 
-  isClosed: boolean = false;
+  isClosed = false;
 
   constructor(public dialogRefMessage: MatDialogRef<ModalMessageComponent>,
-    public dialogRefFilter: MatDialogRef<ModalFilterComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: {isNoCameData: boolean; isNoEnterData: boolean;} ) { }
+              public dialogRefFilter: MatDialogRef<ModalFilterComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: { isNoCameData: boolean; isNoEnterData: boolean }) { }
 
-  close() {
+  close(): void {
     this.dialogRefMessage.close();
   }
 
-  closeAllModal(){
+  closeAllModal(): void {
     this.isClosed = true;
-    this.dialogRefMessage.close({data: this.isClosed});
+    this.dialogRefMessage.close({ data: this.isClosed });
   }
 
 }

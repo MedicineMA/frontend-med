@@ -1,4 +1,4 @@
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './../../material/material.module';
@@ -12,7 +12,6 @@ import { ModalFilterComponent } from './components/modal-filter/modal-filter.com
 import { PharmacyMoreInfoComponent } from './components/pharmacy-more-info/pharmacy-more-info.component';
 import { MapComponent } from './components/map/map.component';
 import { SharedModule } from '../shared/shared.module';
-import { appDirectives } from 'src/app/directives';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import { appDirectives } from 'src/app/directives';
     MapComponent
   ],
   imports: [
-  CommonModule,
+    CommonModule,
     RouterModule,
     MatDialogModule,
     BrowserAnimationsModule,

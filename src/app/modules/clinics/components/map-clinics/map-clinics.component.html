@@ -5,6 +5,9 @@
   <div class="container__search search" placeholder="Аптека: Бажаємо здоров'я">
     <button class="search_button" (click)="open()">Пошук...</button>
   </div>
+  <div class="loading" *ngIf="!clinicsData">
+   <app-preloader></app-preloader>
+  </div>
   <section *ngIf="isDisplayDetails" class="container__details details">
     <app-details
       routeData="/clinics"
@@ -31,7 +34,7 @@
       [latitude]  = "coordinates.latitude | decr : zoom"
       [longitude] = "coordinates.longitude | sum : zoom"
     >
-       <div class="descrip-marker" [descriptionMarker]='zoom'>{{clinic.name}}</div>
+       <div class="descrip-marker" [appDescriptionMarker]='zoom'>{{clinic.name}}</div>
     </agm-overlay>
     </agm-marker>
     </ng-container>

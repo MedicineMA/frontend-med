@@ -15,8 +15,8 @@ export class ModalFilterPrivateDoctorsComponent {
 
   privateDoctorForm: FormGroup;
 
-  public isNoCameData: boolean = false;
-  public isNoEnterData: boolean = false;
+  public isNoCameData = false;
+  public isNoEnterData = false;
 
   allSpecializations: string[] = [];
 
